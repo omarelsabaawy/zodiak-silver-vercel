@@ -45,7 +45,7 @@ exports.postRegister = (req, res, next) => {
     const username = req.body.username;
     const email = req.body.email;
     const password = req.body.password;
-    const isManager = true;
+    const isManager = false;
 
     User.findOne({ email: email })
         .then(userDoc => {
